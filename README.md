@@ -8,7 +8,7 @@ I plan to extend this from time to time.
 
 ## Download for macOS
 
-### ▶︎ [fontsurgery-tools-master.zip](https://github.com/twardoch/fontsurgery-tools/archive/master.zip)
+### ⤓ [fontsurgery-tools-master.zip](https://github.com/twardoch/fontsurgery-tools/archive/master.zip)
 
 ## Installation on macOS
 
