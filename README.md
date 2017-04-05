@@ -50,7 +50,6 @@ At the end, it’ll open the websites where you can download and manually instal
 * Many of the Python libraries come with standalone command-line utilities. 
 * The Python libraries are installed for both Python 2.x and 3.x. 
 * The Python libraries are installed in the “user location” i.e. `/Users/YOURUSERNAME/Library/Python`. This makes it easy to see what’s going on. 
-
 * [unicodedata2](https://github.com/mikekap/unicodedata2)
 * [fontMath](https://github.com/typesupply/fontMath.git)
 * [ufoLib](https://github.com/unified-font-object/ufoLib.git)
