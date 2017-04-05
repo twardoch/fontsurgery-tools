@@ -1,6 +1,6 @@
 # fontsurgery-tools
 
-A collection of simple scripts (currently for **macOS** only) that install various tools and libraries useful for font development. 
+A collection of simple scripts (currently for **macOS** only) that install various tools and libraries useful for font development and hacking. 
 
 I plan to extend this from time to time. 
 
@@ -16,7 +16,7 @@ I plan to extend this from time to time.
 2. Go to the **`macOS`** folder inside the unpacked `fontsurgery-tools-master` folder. 
 3. Double-click on `install-macos.command`. 
 
-The script may run for some 10-20 minutes as it downloads and installs various libraries, and you should be done. 
+The script may run for some 10-20 minutes as it downloads and installs various libraries, and you should be ready to hack your fonts. 
 
 At the end, it’ll open the websites where you can download and manually install further tools: 
 
@@ -28,7 +28,7 @@ At the end, it’ll open the websites where you can download and manually instal
 * If you find that the installation does not work, please [report an issue](https://github.com/twardoch/fontsurgery-tools/issues) on Github. 
 * The scripts use [Homebrew](https://brew.sh/), a macOS management utility for command-line apps, which it installs when needed. 
 * Some libraries ("dependencies") are not usable directly, but they are installed because other tools or libraries need them.
-* In the **`macOS`** folder, there is a `upgrade-macos.command` script which will upgrade a previous installation of the tools. You can do it from time to time. 
+* In the **`macOS`** folder, there is a `upgrade-macos.command` script which will install fresh versions of the various tools. You can run it from time to time. 
 * In the **`macOS-devel`** folder, there are `install-macos-dev.command` and `upgrade-macos-dev.command` scripts which will install cutting-edge versions of the same libraries as the regular script does. Note that the Python libraries will be installed in “development” mode, i.e. inside the `macOS-devel/modules/src` folder. So if you use this method, please place your unpacked `fontsurgery-tools-master` folder in some reasonable location, and possibly rename it (I recommend `/Users/YOURUSERNAME/Developer/fontsurgery-tools`).
 
 ## Non-Python tools and libraries
