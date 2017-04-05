@@ -6,12 +6,15 @@ I plan to extend this from time to time.
 
 — Adam Twardoch, 5 April 2017
 
+## Download for macOS
+
+### [fontsurgery-tools-master.zip](https://github.com/twardoch/fontsurgery-tools/archive/master.zip)
+
 ## Installation on macOS
 
-1. Download **[`fontsurgery-tools-master.zip`](https://github.com/twardoch/fontsurgery-tools/archive/master.zip)** 
-2. Unpack `fontsurgery-tools-master.zip`
-3. Go to the **`macOS`** folder inside the unpacked `fontsurgery-tools-master` folder. 
-4. Double-click on `install-macos.command`. 
+1. Unpack the downloaded `fontsurgery-tools-master.zip`
+2. Go to the **`macOS`** folder inside the unpacked `fontsurgery-tools-master` folder. 
+3. Double-click on `install-macos.command`. 
 
 The script may run for some 10-20 minutes as it downloads and installs various libraries, and you should be done. 
 
