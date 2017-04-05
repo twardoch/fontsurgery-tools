@@ -1,0 +1,33 @@
+# Unicode-related
+-e git+https://github.com/mikekap/unicodedata2#egg=unicodedata2
+
+# fontmake
+## for MutatorMath
+-e git+https://github.com/typesupply/fontMath.git#egg=fontMath
+-e git+https://github.com/unified-font-object/ufoLib.git#egg=ufoLib
+
+## for ufo2ft
+-e git+https://github.com/fonttools/fonttools.git#egg=fonttools
+-e git+https://github.com/googlei18n/compreffor.git#egg=compreffor
+
+## for fontmake
+-e git+https://github.com/googlei18n/cu2qu.git#egg=cu2qu
+-e git+https://github.com/googlei18n/glyphsLib.git#egg=glyphsLib
+-e git+https://github.com/googlei18n/ufo2ft.git#egg=ufo2ft
+-e git+https://github.com/LettError/MutatorMath.git#egg=MutatorMath
+-e git+https://github.com/typemytype/booleanOperations.git#egg=booleanOperations
+-e git+https://github.com/typesupply/defcon.git#egg=defcon
+
+## fontmake
+-e git+https://github.com/googlei18n/fontmake.git#egg=fontmake
+
+# font-related
+-e git+https://github.com/typesupply/feaPyFoFum#egg=feaPyFoFum
+-e git+https://github.com/typesupply/extractor#egg=ufo-extractor
+-e git+https://github.com/LettError/glyphNameFormatter#egg=glyph-name-formatter
+-e git+https://github.com/LettError/designSpaceDocument#egg=designSpaceDocument
+pyparsing
+-e git+https://github.com/daltonmaag/vttLib#egg=vttLib
+-e git+https://github.com/googlei18n/nototools#egg=nototools
+-e git+https://github.com/source-foundry/font-line#egg=font-line
+-e git+https://github.com/anthrotype/shapeops-py#egg=shapeops

@@ -1,0 +1,5 @@
+# Python 3-only
+git+https://github.com/ldo/qahirah#egg=qahirah
+git+https://github.com/ldo/python_freetype#egg=python_freetype
+git+https://github.com/ldo/pybidi#egg=pybidi
+git+https://github.com/ldo/harfpy#egg=harfpy
