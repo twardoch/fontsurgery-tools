@@ -37,6 +37,7 @@ if [ -x "$(which brew)" ]; then
 	brew uninstall --force --ignore-dependencies freetype && brew install freetype
 
 	brew uninstall --force --ignore-dependencies icu4c && brew install --HEAD icu4c
+	brew link --force icu4c
 
 	brew uninstall --force --ignore-dependencies fontconfig && brew install fontconfig
 

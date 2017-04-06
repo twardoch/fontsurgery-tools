@@ -26,7 +26,6 @@
 -e git+https://github.com/typesupply/extractor#egg=ufo-extractor
 -e git+https://github.com/LettError/glyphNameFormatter#egg=glyph-name-formatter
 -e git+https://github.com/LettError/designSpaceDocument#egg=designSpaceDocument
-pyparsing
 -e git+https://github.com/daltonmaag/vttLib#egg=vttLib
 -e git+https://github.com/googlei18n/nototools#egg=nototools
 -e git+https://github.com/source-foundry/font-line#egg=font-line

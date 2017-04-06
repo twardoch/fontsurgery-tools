@@ -9,7 +9,6 @@ git+https://github.com/typesupply/feaPyFoFum#egg=feaPyFoFum
 ufo-extractor
 git+https://github.com/LettError/glyphNameFormatter#egg=glyph-name-formatter
 git+https://github.com/LettError/designSpaceDocument#egg=designSpaceDocument
-pyparsing
 git+https://github.com/daltonmaag/vttLib#egg=vttLib
 git+https://github.com/googlei18n/nototools#egg=nototools
 font-line

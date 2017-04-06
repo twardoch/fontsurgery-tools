@@ -29,6 +29,7 @@ if [ -x "$(which brew)" ]; then
 	brew upgrade freetype
 
 	brew upgrade icu4c 
+	brew link --force icu4c
 
 	brew upgrade fontconfig
 

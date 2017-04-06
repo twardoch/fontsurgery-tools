@@ -22,13 +22,14 @@ if [ -x "$(which brew)" ]; then
 
 	brew upgrade coreutils
 
-	brew upgrade t1utils 
+	brew upgrade --fetch-HEAD t1utils 
 
 	brew upgrade lcdf-typetools
 
 	brew upgrade freetype
 
-	brew upgrade icu4c 
+	brew upgrade --fetch-HEAD icu4c 
+	brew link --force icu4c
 
 	brew upgrade fontconfig
 
@@ -36,11 +37,11 @@ if [ -x "$(which brew)" ]; then
 
 	brew upgrade fribidi
 
-	brew upgrade harfbuzz
+	brew upgrade --fetch-HEAD harfbuzz
 
 	brew upgrade qt5
 
-	brew upgrade ttfautohint
+	brew upgrade --fetch-HEAD ttfautohint
 
 	brew cleanup
 else
