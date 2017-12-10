@@ -1,6 +1,9 @@
 # Unicode-related
 unicodedata2
 
+# UFO
+git+https://github.com/typesupply/vanilla#egg=vanilla
+
 # fontmake
 fontmake
 
@@ -13,3 +16,20 @@ git+https://github.com/daltonmaag/vttLib#egg=vttLib
 git+https://github.com/googlei18n/nototools#egg=nototools
 font-line
 git+https://github.com/anthrotype/shapeops-py#egg=shapeops
+gftools
+font-line
+otrebuilder
+
+# Python 2-only
+PyICU; python_version < '3'
+robofab; python_version < '3'
+git+https://github.com/robofab-developers/fontParts#egg=fontParts; python_version < '3'
+git+https://github.com/typesupply/ufo2fdk#egg=ufo2fdk; python_version < '3'
+git+https://github.com/typesupply/woffTools#egg=woffTools; python_version < '3'
+git+https://github.com/googlefonts/fontbakery#egg=fontbakery; python_version < '3'
+
+# Python 3-only
+git+https://github.com/ldo/qahirah#egg=qahirah; python_version >= '3.6'
+git+https://github.com/ldo/python_freetype#egg=python_freetype; python_version >= '3.6'
+git+https://github.com/ldo/pybidi#egg=pybidi; python_version >= '3.6'
+git+https://github.com/ldo/harfpy#egg=harfpy; python_version >= '3.6'

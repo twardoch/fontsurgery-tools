@@ -1,7 +1,0 @@
-# Python 2-only
-PyICU
-robofab
-git+https://github.com/robofab-developers/fontParts#egg=fontParts
-git+https://github.com/typesupply/ufo2fdk#egg=ufo2fdk
-git+https://github.com/typesupply/woffTools#egg=woffTools
-git+https://github.com/googlefonts/fontbakery#egg=fontbakery
