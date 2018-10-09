@@ -19,12 +19,17 @@ fi
 if [ -x "$(which brew)" ]; then
 	echo "# Installing tools using 'brew'..."
 
-	brew uninstall --force --ignore-dependencies python && brew install python
-	pip install --upgrade --user pip setuptools wheel
+	brew uninstall --force --ignore-dependencies python3
+	brew uninstall --force --ignore-dependencies python2
+	brew uninstall --force --ignore-dependencies python@2
+	brew uninstall --force --ignore-dependencies python
 
-	brew uninstall --force --ignore-dependencies python3 && brew install python3
+	brew install python@2
+	brew install python
+
+	pip2 install --upgrade --user pip setuptools wheel
 	pip3 install --upgrade --user pip setuptools wheel
-
+	
 	brew tap caryll/tap
 	brew uninstall --force --ignore-dependencies otfcc-mac64 && brew install otfcc-mac64
 
