@@ -9,7 +9,7 @@ cd "$dir"
 # Install Python tools
 echo "#"
 echo "# Installing Python 2 tools"
-pip install --user --upgrade -r dev-requirements.txt
+pip2 install --user --upgrade -r dev-requirements.txt
 
 echo "#"
 echo "# Installing Python 3 tools"
