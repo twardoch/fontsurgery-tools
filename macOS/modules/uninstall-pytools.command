@@ -6,7 +6,7 @@ if [ "$dir" = "$0" ]; then
 fi
 cd "$dir"
 
-# Install Python tools
+# Uninstall Python tools
 echo "#"
 echo "# Uninstalling Python 2 and 3 tools"
 for pip in pip2 pip3; do $pip uninstall -y -r requirements.txt; done;
