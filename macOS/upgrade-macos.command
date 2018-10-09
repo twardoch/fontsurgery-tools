@@ -13,10 +13,8 @@ if [ -x "$(which brew)" ]; then
 	brew update
 
 	brew upgrade python@2
-	pip2 install --upgrade --user pip setuptools wheel
-
 	brew upgrade python
-	pip3 install --upgrade --user pip setuptools wheel
+	for pip in pip2 pip3; do $pip install --upgrade --user pip setuptools wheel; done;
 
 	brew upgrade otfcc-mac64
 
