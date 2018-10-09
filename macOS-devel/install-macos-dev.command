@@ -27,8 +27,7 @@ if [ -x "$(which brew)" ]; then
 	brew install python@2
 	brew install python
 
-	pip2 install --upgrade --user pip setuptools wheel
-	pip3 install --upgrade --user pip setuptools wheel
+	for pip in pip2 pip3; do $pip install --upgrade --user pip setuptools wheel; done;
 
 	brew tap caryll/tap
 	brew uninstall --force --ignore-dependencies otfcc-mac64 && brew install otfcc-mac64
