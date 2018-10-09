@@ -8,10 +8,6 @@ cd "$dir"
 
 # Install Python tools
 echo "#"
-echo "# Installing Python 2 tools"
-pip2 install --user --upgrade -r dev-requirements.txt
-
-echo "#"
-echo "# Installing Python 3 tools"
-pip3 install --user --upgrade -r dev-requirements.txt
+echo "# Installing Python 2 and 3 tools"
+for pip in pip2 pip3; do $pip install --upgrade --user -r requirements.txt; done;
 
