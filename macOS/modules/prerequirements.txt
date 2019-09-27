@@ -1,0 +1,28 @@
+setuptools
+pip
+poetry
+
+brotli>=1.0.7; platform_python_implementation != "PyPy"
+brotlipy>=0.7.0; platform_python_implementation == "PyPy"
+unicodedata2>=11.0.0; python_version < '3.7' and platform_python_implementation != "PyPy"
+scipy>=1.2.1; platform_python_implementation != "PyPy"
+munkres>=1.0.12; platform_python_implementation == "PyPy"  # pyup: ignore
+zopfli>=0.1.6
+fs>=2.4.4
+cu2qu>=1.6.5
+booleanOperations>=0.8.2
+skia-pathops>=0.2.0.post2
+Pillow>=4.0.0
+pyclipper>=1.1.0
+scour>=0.37
+protobuf>=3.7.1
+requests>=2.21.0
+lxml>=4.3.3
+pycairo>=1.18.0
+attrs<19.0,>=18.2
+
+# Adobe
+afdko>=2.8.8
+statmake; python_version >= '3.6'
+
+

@@ -9,4 +9,9 @@ cd "$dir"
 # Install Python tools
 echo "#"
 echo "# Installing Python 2 and 3 tools"
-for pip in pip2 pip3; do $pip install --upgrade --user -r requirements.txt; done;
+for v in 2 3; do 
+	echo; 
+	echo "# Installing for Python $v..."; 
+	echo; pip$v install --upgrade --user -r prerequirements.txt; 
+	echo; pip$v install --upgrade --user -r requirements.txt; 
+done;

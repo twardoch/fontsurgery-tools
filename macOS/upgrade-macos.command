@@ -27,7 +27,7 @@ if [ -x "$(which brew)" ]; then
 	brew upgrade freetype
 
 	brew upgrade icu4c 
-	brew link --force icu4c
+	#brew link --force icu4c
 
 	brew upgrade fontconfig
 
@@ -37,7 +37,7 @@ if [ -x "$(which brew)" ]; then
 
 	brew upgrade harfbuzz
 
-	brew upgrade qt5
+	#brew upgrade qt5
 
 	brew upgrade ttfautohint
 

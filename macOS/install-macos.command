@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
-
-dir=${0%/*}
-if [ "$dir" = "$0" ]; then
-  dir="."
-fi
-cd "$dir"
+dir=${0%/*}; if [ "$dir" = "$0" ]; then dir="."; fi; cd "$dir"; 
 
 # Check if brew is installed
 if [ ! -x "$(which brew)" ]; then
@@ -41,7 +36,7 @@ if [ -x "$(which brew)" ]; then
 	brew uninstall --force --ignore-dependencies freetype && brew install freetype
 
 	brew uninstall --force --ignore-dependencies icu4c && brew install icu4c
-	brew link --force icu4c
+	#brew link --force icu4c
 
 	brew uninstall --force --ignore-dependencies fontconfig && brew install fontconfig
 
@@ -51,9 +46,9 @@ if [ -x "$(which brew)" ]; then
 
 	brew uninstall --force --ignore-dependencies harfbuzz && brew install --with-cairo --with-graphite2 harfbuzz
 
-	brew uninstall --force --ignore-dependencies qt5 && brew install qt5
+	# brew uninstall --force --ignore-dependencies qt5 && brew install qt5
 
-	brew uninstall --force --ignore-dependencies ttfautohint && brew install --with-qt5 ttfautohint
+	brew uninstall --force --ignore-dependencies ttfautohint && brew install --without-qt5 ttfautohint
 
 	brew cleanup
 else

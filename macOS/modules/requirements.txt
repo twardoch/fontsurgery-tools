@@ -1,35 +1,68 @@
-# Unicode-related
-unicodedata2
+# fontTools, the mother of dragons
+fonttools>=3.40.0
+
+freetype-py>=2.0.0
+uharfbuzz>=0.3.0
+
+ufoLib>=2.0.0
+glyphsLib>=3.2.0
+ufo2ft>=2.7.0
+MutatorMath>=2.1.2
+defcon>=0.6.0
+opentype-sanitizer>=7.1.9
+ttfautohint-py>=0.4.3
+ufolint>=0.3.5
+ufodiff>=0.5.4
+fontPens>=0.1.0
+fontParts>=0.8.6
+unidecode>=1.0.23
+font-v>=0.7.1
+
+# Google
+compreffor>=0.4.6
+fontmake>=1.9.1
+fontdiffenator>=0.7.16
+fontbakery>=0.4.1
+git+https://github.com/googlefonts/gftools#egg=gftools
+
+# Adobe
+psautohint>=1.9.1
+ufoProcessor>=1.0.6
+#git+https://github.com/adobe-type-tools/opentype-svg#egg=opentype-svg
+
+# Dalton Maag
+# git+https://github.com/daltonmaag/statmake#egg=statmake; python_version >= '3.6'
+
+# Other
+font-line>=1.0.1
+otrebuilder>=1.5.6
 
 # UFO
 git+https://github.com/typesupply/vanilla#egg=vanilla
-
-# fontmake
-fontmake
+ufo-extractor>=0.2.0
 
 # font-related
 git+https://github.com/typesupply/feaPyFoFum#egg=feaPyFoFum
-ufo-extractor
 git+https://github.com/LettError/glyphNameFormatter#egg=glyph-name-formatter
-git+https://github.com/LettError/designSpaceDocument#egg=designSpaceDocument
 git+https://github.com/daltonmaag/vttLib#egg=vttLib
-git+https://github.com/googlei18n/nototools#egg=nototools
-font-line
+git+https://github.com/TiroTypeworks/Volto#egg=Volto
+git+https://github.com/googlefonts/nototools#egg=nototools
 git+https://github.com/anthrotype/shapeops-py#egg=shapeops
-gftools
-font-line
-otrebuilder
+fontdump
+fontname
+woff2otf
+fontcrusher>=0.1.1
+ttf2web
 
 # Python 2-only
 PyICU; python_version < '3'
 robofab; python_version < '3'
-git+https://github.com/robofab-developers/fontParts#egg=fontParts; python_version < '3'
-git+https://github.com/typesupply/ufo2fdk#egg=ufo2fdk; python_version < '3'
 git+https://github.com/typesupply/woffTools#egg=woffTools; python_version < '3'
-git+https://github.com/googlefonts/fontbakery#egg=fontbakery; python_version < '3'
 
 # Python 3-only
+tfont>=0.1.1; python_version >= '3.6'
 git+https://github.com/ldo/qahirah#egg=qahirah; python_version >= '3.6'
 git+https://github.com/ldo/python_freetype#egg=python_freetype; python_version >= '3.6'
 git+https://github.com/ldo/pybidi#egg=pybidi; python_version >= '3.6'
 git+https://github.com/ldo/harfpy#egg=harfpy; python_version >= '3.6'
+
