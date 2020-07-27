@@ -1,29 +1,76 @@
-# fontTools, the mother of dragons
-fonttools>=3.40.0
+setuptools
+pip
+poetry
 
+unicodedata2>=11.0.0; python_version < '3.9' and platform_python_implementation != "PyPy"
+PyICU
+
+brotli>=1.0.7; platform_python_implementation != "PyPy"
+brotlipy>=0.7.0; platform_python_implementation == "PyPy"
+scipy>=1.2.1; platform_python_implementation != "PyPy"
+munkres>=1.0.12; platform_python_implementation == "PyPy"  # pyup: ignore
+zopfli>=0.1.6
+fs>=2.4.4
+Pillow>=4.0.0
+scour>=0.37
+protobuf>=3.7.1
+requests>=2.21.0
+lxml>=4.3.3
+pycairo>=1.18.0
+attrs<19.0,>=18.2
+
+cu2qu>=1.6.5
+booleanOperations>=0.8.2
+skia-pathops>=0.2.0.post2
+pyclipper>=1.1.0
+
+# fontTools, the mother of dragons
+fontTools[interpolatable,lxml,plot,symfont,type1,ufo,unicode,woff]>=4.13.0
+afdko>=2.8.8
+statmake; python_version >= '3.6'
 freetype-py>=2.0.0
 uharfbuzz>=0.3.0
 
 ufoLib>=2.0.0
-glyphsLib>=3.2.0
-ufo2ft>=2.7.0
-MutatorMath>=2.1.2
-defcon>=0.6.0
-opentype-sanitizer>=7.1.9
 ttfautohint-py>=0.4.3
-ufolint>=0.3.5
-ufodiff>=0.5.4
-fontPens>=0.1.0
+
+git+https://github.com/robotools/defconAppKit
+defcon>=0.6.0
 fontParts>=0.8.6
-unidecode>=1.0.23
-font-v>=0.7.1
+git+https://github.com/robotools/vanilla
+ufo-extractor>=0.2.0
+git+https://github.com/robotools/compositor
+git+https://github.com/robotools/ufo2fdk
+git+https://github.com/robotools/fontMath
+git+https://github.com/LettError/MutatorMath
+git+https://github.com/typesupply/feaPyFoFum
+git+https://github.com/LettError/glyphNameFormatter
+
+git+https://github.com/unified-font-object/ufoNormalizer
 
 # Google
 compreffor>=0.4.6
+git+https://github.com/googlefonts/picosvg
+git+https://github.com/googlefonts/nanoemoji
+ufo2ft>=2.7.0
+glyphsLib>=3.2.0
+git+https://github.com/googlefonts/nototools
 fontmake>=1.9.1
+git+https://github.com/googlefonts/ots-python
+
+
 fontdiffenator>=0.7.16
 fontbakery>=0.4.1
 git+https://github.com/googlefonts/gftools#egg=gftools
+
+MutatorMath>=2.1.2
+opentype-sanitizer>=7.1.9
+ufolint>=0.3.5
+ufodiff>=0.5.4
+fontPens>=0.1.0
+unidecode>=1.0.23
+font-v>=0.7.1
+
 
 # Adobe
 psautohint>=1.9.1
@@ -37,15 +84,11 @@ ufoProcessor>=1.0.6
 font-line>=1.0.1
 otrebuilder>=1.5.6
 
-# UFO
-git+https://github.com/typesupply/vanilla#egg=vanilla
-ufo-extractor>=0.2.0
-
 # font-related
 git+https://github.com/typesupply/feaPyFoFum#egg=feaPyFoFum
 git+https://github.com/LettError/glyphNameFormatter#egg=glyph-name-formatter
-git+https://github.com/daltonmaag/vttLib#egg=vttLib
-git+https://github.com/TiroTypeworks/Volto#egg=Volto
+#git+https://github.com/daltonmaag/vttLib#egg=vttLib
+#git+https://github.com/TiroTypeworks/Volto#egg=Volto
 git+https://github.com/googlefonts/nototools#egg=nototools
 git+https://github.com/anthrotype/shapeops-py#egg=shapeops
 fontdump
@@ -55,7 +98,6 @@ fontcrusher>=0.1.1
 ttf2web
 
 # Python 2-only
-PyICU; python_version < '3'
 robofab; python_version < '3'
 git+https://github.com/typesupply/woffTools#egg=woffTools; python_version < '3'
 

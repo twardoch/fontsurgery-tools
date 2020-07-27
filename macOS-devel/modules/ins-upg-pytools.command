@@ -2,12 +2,20 @@
 
 dir=${0%/*}
 if [ "$dir" = "$0" ]; then
-  dir="."
+    dir="."
 fi
 cd "$dir"
 
 # Install Python tools
 echo "#"
-echo "# Installing Python 2 and 3 tools"
-for pip in pip2 pip3; do $pip install --upgrade --user -r requirements.txt; done;
+echo "# Installing Python 3 tools"
 
+cat dev-requirements.txt | sed -e '/^\s*#.*$/d' -e '/^\s*$/d' | while read p; do
+    pip3 install --upgrade --user "$p"
+done
+
+echo "#"
+echo "# Installing Python 2 tools"
+cat dev-requirements.txt | sed -e '/^\s*#.*$/d' -e '/^\s*$/d' | while read p; do
+    pip2 install --upgrade --user "$p"
+done

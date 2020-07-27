@@ -1,52 +1,76 @@
-# Unicode-related
-git+https://github.com/mikekap/unicodedata2#egg=unicodedata2
-
-# UFO
-git+https://github.com/typesupply/vanilla#egg=vanilla
-
-# fontmake
-## for MutatorMath
-git+https://github.com/typesupply/fontMath.git#egg=fontMath
-git+https://github.com/unified-font-object/ufoLib.git#egg=ufoLib
-
-## for ufo2ft
-git+https://github.com/fonttools/fonttools.git#egg=fonttools
-git+https://github.com/googlei18n/compreffor.git#egg=compreffor
-
-## for fontmake
-git+https://github.com/googlei18n/cu2qu.git#egg=cu2qu
-git+https://github.com/googlei18n/glyphsLib.git#egg=glyphsLib
-git+https://github.com/googlei18n/ufo2ft.git#egg=ufo2ft
-git+https://github.com/LettError/MutatorMath.git#egg=MutatorMath
-git+https://github.com/typemytype/booleanOperations.git#egg=booleanOperations
-git+https://github.com/typesupply/defcon.git#egg=defcon
-
-## fontmake
-git+https://github.com/googlei18n/fontmake.git#egg=fontmake
-
-# font-related
-git+https://github.com/typesupply/feaPyFoFum#egg=feaPyFoFum
-git+https://github.com/typesupply/extractor#egg=ufo-extractor
-git+https://github.com/LettError/glyphNameFormatter#egg=glyph-name-formatter
-git+https://github.com/LettError/designSpaceDocument#egg=designSpaceDocument
-git+https://github.com/daltonmaag/vttLib#egg=vttLib
-git+https://github.com/googlei18n/nototools#egg=nototools
-git+https://github.com/source-foundry/font-line#egg=font-line
-git+https://github.com/anthrotype/shapeops-py#egg=shapeops
-git+https://github.com/googlefonts/tools#egg=gftools
-git+https://github.com/source-foundry/font-line#egg=font-line
-git+https://github.com/Pal3love/otRebuilder#egg=otrebuilder
-
-# Python 2-only
-PyICU; python_version < '3'
-git+https://github.com/robofab-developers/robofab#egg=robofab; python_version < '3'
-git+https://github.com/robofab-developers/fontParts#egg=fontParts; python_version < '3'
-git+https://github.com/typesupply/ufo2fdk#egg=ufo2fdk; python_version < '3'
-git+https://github.com/typesupply/woffTools#egg=woffTools; python_version < '3'
-git+https://github.com/googlefonts/fontbakery#egg=fontbakery; python_version < '3'
-
-# Python 3-only
-git+https://github.com/ldo/qahirah#egg=qahirah; python_version >= '3.6'
-git+https://github.com/ldo/python_freetype#egg=python_freetype; python_version >= '3.6'
-git+https://github.com/ldo/pybidi#egg=pybidi; python_version >= '3.6'
-git+https://github.com/ldo/harfpy#egg=harfpy; python_version >= '3.6'
+setuptools
+pip
+poetry
+unicodedata2>=11.0.0; python_version < '3.9' and platform_python_implementation != "PyPy"
+PyICU
+brotli>=1.0.7; platform_python_implementation != "PyPy"
+brotlipy>=0.7.0; platform_python_implementation == "PyPy"
+scipy>=1.2.1; platform_python_implementation != "PyPy"
+munkres>=1.0.12; platform_python_implementation == "PyPy"  # pyup: ignore
+zopfli>=0.1.6
+fs>=2.4.4
+Pillow>=4.0.0
+scour>=0.37
+protobuf>=3.7.1
+requests>=2.21.0
+lxml>=4.3.3
+pycairo>=1.18.0
+attrs<19.0,>=18.2
+git+https://github.com/googlefonts/cu2qu
+git+https://github.com/typemytype/booleanOperations; python_version < '3'
+git+https://github.com/fonttools/skia-pathops
+git+https://github.com/fonttools/pyclipper
+git+https://github.com/fonttools/fonttools/#egg=fonttools[interpolatable,lxml,plot,symfont,type1,ufo,unicode,woff]
+afdko>=2.8.8
+git+https://github.com/daltonmaag/statmake
+git+https://github.com/rougier/freetype-py
+git+https://github.com/harfbuzz/uharfbuzz
+git+https://github.com/fonttools/ufoLib2
+git+https://github.com/fonttools/ttfautohint-py
+git+https://github.com/robotools/defconAppKit
+git+https://github.com/robotools/defcon
+git+https://github.com/robotools/fontParts
+git+https://github.com/robotools/vanilla
+git+https://github.com/robotools/extractor
+git+https://github.com/robotools/compositor
+git+https://github.com/robotools/ufo2fdk
+git+https://github.com/robotools/fontMath
+git+https://github.com/LettError/MutatorMath
+git+https://github.com/typesupply/feaPyFoFum
+git+https://github.com/LettError/glyphNameFormatter
+git+https://github.com/unified-font-object/ufoLib
+git+https://github.com/unified-font-object/ufoNormalizer
+git+https://github.com/googlefonts/compreffor
+git+https://github.com/googlefonts/picosvg
+git+https://github.com/googlefonts/nanoemoji
+git+https://github.com/googlefonts/ufo2ft
+git+https://github.com/googlefonts/glyphsLib
+git+https://github.com/googlefonts/nototools
+git+https://github.com/googlefonts/fontmake
+git+https://github.com/googlefonts/ots-python
+git+https://github.com/adobe-type-tools/psautohint
+git+https://github.com/adobe-type-tools/afdko
+git+https://github.com/googlefonts/gftools
+git+https://github.com/googlefonts/gfregression
+git+https://github.com/googlefonts/fontdiffenator
+git+https://github.com/googlefonts/diffbrowsers
+git+https://github.com/googlefonts/pyfontaine
+git+https://github.com/googlefonts/fontbakery
+git+https://github.com/anthrotype/unicode-segmentation-py
+git+https://github.com/anthrotype/usvg-python
+git+https://github.com/daltonmaag/vttLib
+git+https://github.com/daltonmaag/extractFea
+git+https://github.com/daltonmaag/sfntly-py
+git+https://github.com/source-foundry/font-line
+git+https://github.com/source-foundry/ufolint
+git+https://github.com/source-foundry/fdiff
+git+https://github.com/source-foundry/font-v
+git+https://github.com/source-foundry/dehinter
+git+https://github.com/source-foundry/ufodiff
+git+https://github.com/Pal3love/otRebuilder
+git+https://github.com/trufont/tfont
+git+https://github.com/twardoch/fonttools-py27; python_version < '3'
+git+https://github.com/ldo/qahirah; python_version >= '3.6'
+git+https://github.com/ldo/python_freetype; python_version >= '3.6'
+git+https://github.com/ldo/pybidi; python_version >= '3.6'
+git+https://github.com/ldo/harfpy; python_version >= '3.6'
