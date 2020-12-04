@@ -79,10 +79,10 @@ At the end, it’ll open the websites where you can download and manually instal
 * [fontParts](https://github.com/robofab-developers/fontParts)
 * [ufo2fdk](https://github.com/typesupply/ufo2fdk)
 * [woffTools](https://github.com/typesupply/woffTools)
-* [fontbakery](https://github.com/googlefonts/fontbakery)
 
 ### Python 3 only: 
 
+* [fontbakery](https://github.com/googlefonts/fontbakery)
 * [qahirah](https://github.com/ldo/qahirah)
 * [python_freetype](https://github.com/ldo/python_freetype)
 * [pybidi](https://github.com/ldo/pybidi)
