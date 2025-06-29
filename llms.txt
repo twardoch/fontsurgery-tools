@@ -1,0 +1,1053 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+macOS/
+  modules/
+    ins-upg-pytools.command
+    requirements.txt
+    uninstall-pytools.command
+  install-macos.command
+  upgrade-macos.command
+macOS-devel/
+  modules/
+    dev-requirements.txt
+    ins-upg-pytools.command
+    uninstall-pytools.command
+  packaged/
+    vfautohint-1.8.1.43-b0c9/
+      vfautohint.command
+  install-macos-dev.command
+  upgrade-macos-dev.command
+_config.yml
+.gitignore
+LICENSE
+README.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="macOS-devel/packaged/vfautohint-1.8.1.43-b0c9/vfautohint.command">
+#!/usr/bin/env bash
+
+dir=${0%/*}
+if [ "$dir" = "$0" ]; then
+  dir="."
+fi
+cd "$dir"
+
+if [ -z "$1" ]; then
+	echo "Please enter the path to the -VF.ttf font file, or drag-drop the file from Finder:"
+	read fontpath
+else
+	fontpath="$1";
+fi
+
+echo "Autohinting font: $fontpath"
+"$dir/ttfautohint-vf" -i -W "$fontpath" "$fontpath.hinted.ttf"
+echo "Saved autohinted font: $fontpath.hinted.ttf"
+</file>
+
+<file path="_config.yml">
+theme: jekyll-theme-minimal
+</file>
+
+<file path="LICENSE">
+Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "{}"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright {yyyy} {name of copyright owner}
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+</file>
+
+<file path="macOS-devel/modules/uninstall-pytools.command">
+#!/usr/bin/env bash
+
+dir=${0%/*}
+if [ "$dir" = "$0" ]; then
+  dir="."
+fi
+cd "$dir"
+
+# Uninstall Python tools
+echo "#"
+echo "# Uninstalling Python 2 and 3 tools"
+for pip in pip2 pip3; do $pip uninstall -y -r requirements.txt; done;
+</file>
+
+<file path=".gitignore">
+macOS-devel/modules/src/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# IPython Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# dotenv
+.env
+
+# virtualenv
+venv/
+ENV/
+
+# Spyder project settings
+.spyderproject
+
+# Rope project settings
+.ropeproject
+
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+</file>
+
+<file path="macOS/modules/uninstall-pytools.command">
+#!/usr/bin/env bash
+
+dir=${0%/*}
+if [ "$dir" = "$0" ]; then
+  dir="."
+fi
+cd "$dir"
+
+# Uninstall Python tools
+echo "#"
+echo "# Uninstalling Python 2 and 3 tools"
+
+for v in 2 3; do 
+	echo; 
+	echo "# Uninstalling for Python $v..."; 
+	echo; pip$v uninstall -y -r prerequirements.txt; 
+	echo; pip$v uninstall -y -r requirements.txt; 
+done;
+</file>
+
+<file path="macOS-devel/modules/dev-requirements.txt">
+setuptools
+pip
+poetry
+unicodedata2>=11.0.0; python_version < '3.9' and platform_python_implementation != "PyPy"
+PyICU
+brotli>=1.0.7; platform_python_implementation != "PyPy"
+brotlipy>=0.7.0; platform_python_implementation == "PyPy"
+scipy>=1.2.1; platform_python_implementation != "PyPy"
+munkres>=1.0.12; platform_python_implementation == "PyPy"  # pyup: ignore
+zopfli>=0.1.6
+fs>=2.4.4
+Pillow>=4.0.0
+scour>=0.37
+protobuf>=3.7.1
+requests>=2.21.0
+lxml>=4.3.3
+pycairo>=1.18.0
+attrs<19.0,>=18.2
+git+https://github.com/googlefonts/cu2qu
+git+https://github.com/typemytype/booleanOperations; python_version < '3'
+git+https://github.com/fonttools/skia-pathops
+git+https://github.com/fonttools/pyclipper
+git+https://github.com/fonttools/fonttools/#egg=fonttools[interpolatable,lxml,plot,symfont,type1,ufo,unicode,woff]
+afdko>=2.8.8
+git+https://github.com/daltonmaag/statmake
+git+https://github.com/rougier/freetype-py
+git+https://github.com/harfbuzz/uharfbuzz
+git+https://github.com/fonttools/ufoLib2
+git+https://github.com/fonttools/ttfautohint-py
+git+https://github.com/robotools/defconAppKit
+git+https://github.com/robotools/defcon
+git+https://github.com/robotools/fontParts
+git+https://github.com/robotools/vanilla
+git+https://github.com/robotools/extractor
+git+https://github.com/robotools/compositor
+git+https://github.com/robotools/ufo2fdk
+git+https://github.com/robotools/fontMath
+git+https://github.com/LettError/MutatorMath
+git+https://github.com/typesupply/feaPyFoFum
+git+https://github.com/LettError/glyphNameFormatter
+git+https://github.com/unified-font-object/ufoLib
+git+https://github.com/unified-font-object/ufoNormalizer
+git+https://github.com/googlefonts/compreffor
+git+https://github.com/googlefonts/picosvg
+git+https://github.com/googlefonts/nanoemoji
+git+https://github.com/googlefonts/ufo2ft
+git+https://github.com/googlefonts/glyphsLib
+git+https://github.com/googlefonts/nototools
+git+https://github.com/googlefonts/fontmake
+git+https://github.com/googlefonts/ots-python
+git+https://github.com/adobe-type-tools/psautohint
+git+https://github.com/adobe-type-tools/afdko
+git+https://github.com/googlefonts/gftools
+git+https://github.com/googlefonts/gfregression
+git+https://github.com/googlefonts/fontdiffenator
+git+https://github.com/googlefonts/diffbrowsers
+git+https://github.com/googlefonts/pyfontaine
+git+https://github.com/googlefonts/fontbakery
+git+https://github.com/anthrotype/unicode-segmentation-py
+git+https://github.com/anthrotype/usvg-python
+git+https://github.com/daltonmaag/vttLib
+git+https://github.com/daltonmaag/extractFea
+git+https://github.com/daltonmaag/sfntly-py
+git+https://github.com/source-foundry/font-line
+git+https://github.com/source-foundry/ufolint
+git+https://github.com/source-foundry/fdiff
+git+https://github.com/source-foundry/font-v
+git+https://github.com/source-foundry/dehinter
+git+https://github.com/source-foundry/ufodiff
+git+https://github.com/Pal3love/otRebuilder
+git+https://github.com/trufont/tfont
+git+https://github.com/twardoch/fonttools-py27; python_version < '3'
+git+https://github.com/ldo/qahirah; python_version >= '3.6'
+git+https://github.com/ldo/python_freetype; python_version >= '3.6'
+git+https://github.com/ldo/pybidi; python_version >= '3.6'
+git+https://github.com/ldo/harfpy; python_version >= '3.6'
+</file>
+
+<file path="macOS-devel/install-macos-dev.command">
+#!/usr/bin/env bash
+
+dir=${0%/*}
+if [ "$dir" = "$0" ]; then
+  dir="."
+fi
+cd "$dir"
+
+# Check if brew is installed
+if [ ! -x "$(which brew)" ]; then
+	echo "# Installing 'brew'..."
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+	echo "# Updating 'brew'..."
+	brew update
+fi 
+
+# Check if brew is installed
+if [ -x "$(which brew)" ]; then
+	echo "# Installing tools using 'brew'..."
+
+	brew uninstall --force --ignore-dependencies python3
+	brew uninstall --force --ignore-dependencies python2
+	brew uninstall --force --ignore-dependencies python@2
+	brew uninstall --force --ignore-dependencies python
+
+	brew install python@2
+	brew install python
+
+	for pip in pip2 pip3; do $pip install --upgrade --user pip setuptools wheel; done;
+
+	brew tap caryll/tap
+	brew uninstall --force --ignore-dependencies otfcc-mac64 && brew install otfcc-mac64
+
+	brew uninstall --force --ignore-dependencies coreutils && brew install coreutils
+
+	brew uninstall --force --ignore-dependencies t1utils && brew install --HEAD t1utils 
+
+	brew uninstall --force --ignore-dependencies lcdf-typetools && brew install lcdf-typetools
+
+	brew uninstall --force --ignore-dependencies freetype && brew install freetype
+
+	brew uninstall --force --ignore-dependencies icu4c && brew install --HEAD icu4c
+	brew link --force icu4c
+
+	brew uninstall --force --ignore-dependencies fontconfig && brew install fontconfig
+
+	brew uninstall --force --ignore-dependencies cairo && brew install --devel cairo
+
+	brew uninstall --force --ignore-dependencies fribidi && brew install --devel fribidi
+
+	brew uninstall --force --ignore-dependencies harfbuzz && brew install --HEAD --with-cairo --with-graphite2 harfbuzz
+
+	brew uninstall --force --ignore-dependencies qt5 && brew install qt5
+
+	brew uninstall --force --ignore-dependencies ttfautohint && brew install --HEAD --with-qt5 ttfautohint
+
+	brew cleanup
+else
+	echo "# Tools not installed!"
+fi 
+
+echo "#"
+modules/ins-upg-pytools.command
+
+echo "# Done!"
+
+echo "Install or upgrade Apple Font Tools for Xcode (8.2 or newer) manually from website!"
+open "https://developer.apple.com/download/more/?=Font%20Tools%20for%20Xcode"
+
+echo "Install or upgrade Adobe FDK for OpenType (AFDKO) manually from website!"
+open "http://www.adobe.com/devnet/opentype/afdko/eula.html"
+</file>
+
+<file path="macOS-devel/upgrade-macos-dev.command">
+#!/usr/bin/env bash
+
+dir=${0%/*}
+if [ "$dir" = "$0" ]; then
+  dir="."
+fi
+cd "$dir"
+
+# Check if brew is installed
+if [ -x "$(which brew)" ]; then
+	echo "# Installing tools using 'brew'..."
+
+	brew update
+
+	brew upgrade python@2
+	brew upgrade python
+	for pip in pip2 pip3; do $pip install --upgrade --user pip setuptools wheel; done;
+
+	brew upgrade otfcc-mac64
+
+	brew upgrade coreutils
+
+	brew upgrade --fetch-HEAD t1utils 
+
+	brew upgrade lcdf-typetools
+
+	brew upgrade freetype
+
+	brew upgrade --fetch-HEAD icu4c 
+	brew link --force icu4c
+
+	brew upgrade fontconfig
+
+	brew upgrade cairo
+
+	brew upgrade fribidi
+
+	brew upgrade --fetch-HEAD harfbuzz
+
+	brew upgrade qt5
+
+	brew upgrade --fetch-HEAD ttfautohint
+
+	brew cleanup
+else
+	echo "# Please run install-macos.command!"
+fi 
+
+echo "#"
+modules/ins-upg-pytools.command
+
+echo "# Done!"
+
+echo "Install or upgrade Apple Font Tools for Xcode (8.2 or newer) manually from website!"
+open "https://developer.apple.com/download/more/?=Font%20Tools%20for%20Xcode"
+
+echo "Install or upgrade Adobe FDK for OpenType (AFDKO) manually from website!"
+open "http://www.adobe.com/devnet/opentype/afdko/eula.html"
+</file>
+
+<file path="macOS/modules/ins-upg-pytools.command">
+#!/usr/bin/env bash
+
+dir=${0%/*}
+if [ "$dir" = "$0" ]; then
+    dir="."
+fi
+cd "$dir"
+
+# Install Python tools
+echo "#"
+echo "# Installing Python 3 tools"
+
+cat requirements.txt | sed -e '/^\s*#.*$/d' -e '/^\s*$/d' | while read p; do
+    pip3 install --upgrade --user "$p"
+done
+
+echo "#"
+echo "# Installing Python 2 tools"
+cat requirements.txt | sed -e '/^\s*#.*$/d' -e '/^\s*$/d' | while read p; do
+    pip2 install --upgrade --user "$p"
+done
+</file>
+
+<file path="macOS/modules/requirements.txt">
+setuptools
+pip
+poetry
+
+unicodedata2>=11.0.0; python_version < '3.9' and platform_python_implementation != "PyPy"
+PyICU
+
+brotli>=1.0.7; platform_python_implementation != "PyPy"
+brotlipy>=0.7.0; platform_python_implementation == "PyPy"
+scipy>=1.2.1; platform_python_implementation != "PyPy"
+munkres>=1.0.12; platform_python_implementation == "PyPy"  # pyup: ignore
+zopfli>=0.1.6
+fs>=2.4.4
+Pillow>=4.0.0
+scour>=0.37
+protobuf>=3.7.1
+requests>=2.21.0
+lxml>=4.3.3
+pycairo>=1.18.0
+attrs<19.0,>=18.2
+
+cu2qu>=1.6.5
+booleanOperations>=0.8.2
+skia-pathops>=0.2.0.post2
+pyclipper>=1.1.0
+
+# fontTools, the mother of dragons
+fontTools[interpolatable,lxml,plot,symfont,type1,ufo,unicode,woff]>=4.13.0
+afdko>=2.8.8
+statmake; python_version >= '3.6'
+freetype-py>=2.0.0
+uharfbuzz>=0.3.0
+
+ufoLib>=2.0.0
+ttfautohint-py>=0.4.3
+
+git+https://github.com/robotools/defconAppKit
+defcon>=0.6.0
+fontParts>=0.8.6
+git+https://github.com/robotools/vanilla
+ufo-extractor>=0.2.0
+git+https://github.com/robotools/compositor
+git+https://github.com/robotools/ufo2fdk
+git+https://github.com/robotools/fontMath
+git+https://github.com/LettError/MutatorMath
+git+https://github.com/typesupply/feaPyFoFum
+git+https://github.com/LettError/glyphNameFormatter
+
+git+https://github.com/unified-font-object/ufoNormalizer
+
+# Google
+compreffor>=0.4.6
+git+https://github.com/googlefonts/picosvg
+git+https://github.com/googlefonts/nanoemoji
+ufo2ft>=2.7.0
+glyphsLib>=3.2.0
+git+https://github.com/googlefonts/nototools
+fontmake>=1.9.1
+git+https://github.com/googlefonts/ots-python
+
+
+fontdiffenator>=0.7.16
+fontbakery>=0.4.1
+git+https://github.com/googlefonts/gftools#egg=gftools
+
+MutatorMath>=2.1.2
+opentype-sanitizer>=7.1.9
+ufolint>=0.3.5
+ufodiff>=0.5.4
+fontPens>=0.1.0
+unidecode>=1.0.23
+font-v>=0.7.1
+
+
+# Adobe
+psautohint>=1.9.1
+ufoProcessor>=1.0.6
+#git+https://github.com/adobe-type-tools/opentype-svg#egg=opentype-svg
+
+# Dalton Maag
+# git+https://github.com/daltonmaag/statmake#egg=statmake; python_version >= '3.6'
+
+# Other
+font-line>=1.0.1
+otrebuilder>=1.5.6
+
+# font-related
+git+https://github.com/typesupply/feaPyFoFum#egg=feaPyFoFum
+git+https://github.com/LettError/glyphNameFormatter#egg=glyph-name-formatter
+#git+https://github.com/daltonmaag/vttLib#egg=vttLib
+#git+https://github.com/TiroTypeworks/Volto#egg=Volto
+git+https://github.com/googlefonts/nototools#egg=nototools
+git+https://github.com/anthrotype/shapeops-py#egg=shapeops
+fontdump
+fontname
+woff2otf
+fontcrusher>=0.1.1
+ttf2web
+
+# Python 2-only
+robofab; python_version < '3'
+git+https://github.com/typesupply/woffTools#egg=woffTools; python_version < '3'
+
+# Python 3-only
+tfont>=0.1.1; python_version >= '3.6'
+git+https://github.com/ldo/qahirah#egg=qahirah; python_version >= '3.6'
+git+https://github.com/ldo/python_freetype#egg=python_freetype; python_version >= '3.6'
+git+https://github.com/ldo/pybidi#egg=pybidi; python_version >= '3.6'
+git+https://github.com/ldo/harfpy#egg=harfpy; python_version >= '3.6'
+</file>
+
+<file path="macOS/install-macos.command">
+#!/usr/bin/env bash
+dir=${0%/*}; if [ "$dir" = "$0" ]; then dir="."; fi; cd "$dir"; 
+
+# Check if brew is installed
+if [ ! -x "$(which brew)" ]; then
+	echo "# Installing 'brew'..."
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+	echo "# Updating 'brew'..."
+	brew update
+fi 
+
+# Check if brew is installed
+if [ -x "$(which brew)" ]; then
+	echo "# Installing tools using 'brew'..."
+
+	brew uninstall --force --ignore-dependencies python3
+	brew uninstall --force --ignore-dependencies python2
+	brew uninstall --force --ignore-dependencies python@2
+	brew uninstall --force --ignore-dependencies python
+
+	brew install python@2
+	brew install python
+
+	for pip in pip2 pip3; do $pip install --upgrade --user pip setuptools wheel; done;
+	
+	brew tap caryll/tap
+	brew uninstall --force --ignore-dependencies otfcc-mac64 && brew install otfcc-mac64
+
+	brew uninstall --force --ignore-dependencies coreutils && brew install coreutils
+
+	brew uninstall --force --ignore-dependencies t1utils && brew install t1utils 
+
+	brew uninstall --force --ignore-dependencies lcdf-typetools && brew install lcdf-typetools
+
+	brew uninstall --force --ignore-dependencies freetype && brew install freetype
+
+	brew uninstall --force --ignore-dependencies icu4c && brew install icu4c
+	#brew link --force icu4c
+
+	brew uninstall --force --ignore-dependencies fontconfig && brew install fontconfig
+
+	brew uninstall --force --ignore-dependencies cairo && brew install --devel cairo
+
+	brew uninstall --force --ignore-dependencies fribidi && brew install --devel fribidi
+
+	brew uninstall --force --ignore-dependencies harfbuzz && brew install --with-cairo --with-graphite2 harfbuzz
+
+	# brew uninstall --force --ignore-dependencies qt5 && brew install qt5
+
+	brew uninstall --force --ignore-dependencies ttfautohint && brew install --without-qt5 ttfautohint
+
+	brew cleanup
+else
+	echo "# Tools not installed!"
+fi 
+
+echo "#"
+modules/ins-upg-pytools.command
+
+echo "# Done!"
+
+echo "Install or upgrade Apple Font Tools for Xcode (8.2 or newer) manually from website!"
+open "https://developer.apple.com/download/more/?=Font%20Tools%20for%20Xcode"
+
+echo "Install or upgrade Adobe FDK for OpenType (AFDKO) manually from website!"
+open "http://www.adobe.com/devnet/opentype/afdko/eula.html"
+</file>
+
+<file path="macOS/upgrade-macos.command">
+#!/usr/bin/env bash
+
+dir=${0%/*}
+if [ "$dir" = "$0" ]; then
+  dir="."
+fi
+cd "$dir"
+
+# Check if brew is installed
+if [ -x "$(which brew)" ]; then
+	echo "# Installing tools using 'brew'..."
+
+	brew update
+
+	brew upgrade python@2
+	brew upgrade python
+	for pip in pip2 pip3; do $pip install --upgrade --user pip setuptools wheel; done;
+
+	brew upgrade otfcc-mac64
+
+	brew upgrade coreutils
+
+	brew upgrade t1utils 
+
+	brew upgrade lcdf-typetools
+
+	brew upgrade freetype
+
+	brew upgrade icu4c 
+	#brew link --force icu4c
+
+	brew upgrade fontconfig
+
+	brew upgrade cairo
+
+	brew upgrade fribidi
+
+	brew upgrade harfbuzz
+
+	#brew upgrade qt5
+
+	brew upgrade ttfautohint
+
+	brew cleanup
+else
+	echo "# Please run install-macos.command!"
+fi 
+
+echo "#"
+modules/ins-upg-pytools.command
+
+echo "# Done!"
+
+echo "Install or upgrade Apple Font Tools for Xcode (8.2 or newer) manually from website!"
+open "https://developer.apple.com/download/more/?=Font%20Tools%20for%20Xcode"
+
+echo "Install or upgrade Adobe FDK for OpenType (AFDKO) manually from website!"
+open "http://www.adobe.com/devnet/opentype/afdko/eula.html"
+</file>
+
+<file path="macOS-devel/modules/ins-upg-pytools.command">
+#!/usr/bin/env bash
+
+dir=${0%/*}
+if [ "$dir" = "$0" ]; then
+    dir="."
+fi
+cd "$dir"
+
+# Install Python tools
+echo "#"
+echo "# Installing Python 3 tools"
+
+cat dev-requirements.txt | sed -e '/^\s*#.*$/d' -e '/^\s*$/d' | while read p; do
+    pip3 install --upgrade --user "$p"
+done
+
+echo "#"
+echo "# Installing Python 2 tools"
+cat dev-requirements.txt | sed -e '/^\s*#.*$/d' -e '/^\s*$/d' | while read p; do
+    pip2 install --upgrade --user "$p"
+done
+</file>
+
+<file path="README.md">
+# fontsurgery-tools
+
+A collection of simple scripts (currently for **macOS** only) that install various tools and libraries useful for font development and hacking. 
+
+I plan to extend this from time to time. 
+
+— Adam Twardoch, 5 April 2017
+
+## Download for macOS
+
+### 👉🏿 [fontsurgery-tools-master.zip](https://github.com/twardoch/fontsurgery-tools/archive/master.zip)
+
+## Installation on macOS
+
+1. Unpack the downloaded `fontsurgery-tools-master.zip`
+2. Go to the **`macOS`** folder inside the unpacked `fontsurgery-tools-master` folder. 
+3. Double-click on `install-macos.command`. 
+
+The script may run for some 10-20 minutes as it downloads and installs various libraries, and you should be ready to hack your fonts. 
+
+At the end, it’ll open the websites where you can download and manually install further tools: 
+
+* [Apple Font Tools for Xcode 8.2 or newer](https://developer.apple.com/download/more/?=Font%20Tools%20for%20Xcode)
+* [Adobe FDK for OpenType, AFDKO](http://www.adobe.com/devnet/opentype/afdko/eula.html)
+
+## Notes 
+
+* If you find that the installation does not work, please [report an issue](https://github.com/twardoch/fontsurgery-tools/issues) on Github. 
+* The scripts use [Homebrew](https://brew.sh/), a macOS management utility for command-line apps, which it installs when needed. 
+* Some libraries ("dependencies") are not usable directly, but they are installed because other tools or libraries need them.
+* In the **`macOS`** folder, there is a `upgrade-macos.command` script which will install fresh versions of the various tools. You can run it from time to time. 
+* In the **`macOS-devel`** folder, there are `install-macos-dev.command` and `upgrade-macos-dev.command` scripts which will install cutting-edge versions of the same libraries as the regular script does (but those versions may fail installing or not work properly!) Note that the Python libraries will be installed in “development” mode, i.e. inside the `macOS-devel/modules/src` folder. So if you use this method, please place your unpacked `fontsurgery-tools-master` folder in some reasonable location, and possibly rename it (I recommend `/Users/YOURUSERNAME/Developer/fontsurgery-tools`).
+
+## Non-Python tools and libraries
+
+* [otfcc](https://github.com/caryll/otfcc)
+* [t1utils](https://github.com/kohler/t1utils)
+* [lcdf-typetools](https://github.com/kohler/lcdf-typetools)
+* [freetype](https://www.freetype.org/)
+* [icu](http://site.icu-project.org/)
+* [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/)
+* [cairo](https://cairographics.org/)
+* [fribidi](https://fribidi.org/)
+* [harfbuzz](https://github.com/behdad/harfbuzz)
+* [ttfautohint](https://www.freetype.org/ttfautohint/)
+
+## Python tools and libraries
+
+* The scripts install the newest Python 2.7.x and the newest Python 3.x, even though macOS already has them, but those come in an older version. 
+* Many of the Python libraries come with standalone command-line utilities. 
+* The Python libraries are installed for both Python 2.x and 3.x. 
+* The Python libraries are installed in the “user location” i.e. `/Users/YOURUSERNAME/Library/Python`. This makes it easy to see what’s going on. 
+* [unicodedata2](https://github.com/mikekap/unicodedata2)
+* [fontMath](https://github.com/typesupply/fontMath.git)
+* [ufoLib](https://github.com/unified-font-object/ufoLib.git)
+* [fonttools](https://github.com/fonttools/fonttools.git)
+* [compreffor](https://github.com/googlei18n/compreffor.git)
+* [cu2qu](https://github.com/googlei18n/cu2qu.git)
+* [glyphsLib](https://github.com/googlei18n/glyphsLib.git)
+* [ufo2ft](https://github.com/googlei18n/ufo2ft.git)
+* [MutatorMath](https://github.com/LettError/MutatorMath.git)
+* [booleanOperations](https://github.com/typemytype/booleanOperations.git)
+* [defcon](https://github.com/typesupply/defcon.git)
+* [fontmake](https://github.com/googlei18n/fontmake.git)
+* [feaPyFoFum](https://github.com/typesupply/feaPyFoFum)
+* [ufo-extractor](https://github.com/typesupply/extractor)
+* [glyph-name-formatter](https://github.com/LettError/glyphNameFormatter)
+* [designSpaceDocument](https://github.com/LettError/designSpaceDocument)
+* [pyparsing](http://pyparsing.wikispaces.com/)
+* [vttLib](https://github.com/daltonmaag/vttLib)
+* [nototools](https://github.com/googlei18n/nototools)
+* [font-line](https://github.com/source-foundry/font-line)
+* [shapeops](https://github.com/anthrotype/shapeops-py)
+* [PyICU](https://pypi.python.org/pypi/PyICU/)
+
+### Python 2 only: 
+
+* [robofab](https://github.com/robofab-developers/robofab)
+* [fontParts](https://github.com/robofab-developers/fontParts)
+* [ufo2fdk](https://github.com/typesupply/ufo2fdk)
+* [woffTools](https://github.com/typesupply/woffTools)
+* [fontbakery](https://github.com/googlefonts/fontbakery)
+
+### Python 3 only: 
+
+* [qahirah](https://github.com/ldo/qahirah)
+* [python_freetype](https://github.com/ldo/python_freetype)
+* [pybidi](https://github.com/ldo/pybidi)
+* [harfpy](https://github.com/ldo/harfpy)
+</file>
+
+</files>
