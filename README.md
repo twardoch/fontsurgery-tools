@@ -1,8 +1,10 @@
 # fontsurgery-tools
 
-A collection of simple scripts (currently for **macOS** only) that install various tools and libraries useful for font development and hacking. 
+<img src="docs/assets/icon.png" align="right" width="180" alt="fontsurgery-tools icon">
 
-I plan to extend this from time to time. 
+A collection of simple scripts (for **macOS** only) that install a font-development toolchain — fontTools, fontmake, harfbuzz, ttfautohint, and dozens more — in one double-click.
+
+> **⚠️ Archived (2017).** This is a historical snapshot from April 2017. It still bootstraps a working font-hacking setup, but the world moved on: Homebrew now installs most of these tools directly (`brew install fonttools harfbuzz ttfautohint`), the Python libraries live on PyPI (`pip install fonttools fontmake`), and the Python 2 halves below are obsolete. Keep it for reference, or as a starting point you'll want to prune. It is no longer actively maintained.
 
 — Adam Twardoch, 5 April 2017
 

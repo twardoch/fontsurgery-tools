@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased] - 2025-06-29
+## [Unreleased]
+
+### Changed
+- Added an "Archived (2017)" banner to the README, noting that Homebrew and PyPI now install most of these tools directly.
+- Added a monochrome line-art project icon at `docs/assets/icon.png`.
+- Stopped tracking the generated `llms.txt` codebase snapshot (moved to `.gitignore`).
+
+## [1.0.0] - 2025-06-29
 
 ### Recent Changes
 - Updated vfautohint package
