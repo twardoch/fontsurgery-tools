@@ -120,3 +120,5 @@ Temporary Items
 
 # Generated codebase snapshot (not source)
 llms.txt
+.DS_Store
+*.pyc
